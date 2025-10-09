@@ -10,7 +10,7 @@ public class Reserva {
     private LocalDate date;
     private LocalTime time;
 
-    public Reserva(Integer idSala, LocalDate date, LocalTime time) {
+    public Reserva(Integer id, Integer idSala, LocalDate date, LocalTime time) {
         if(date.isBefore(LocalDate.now())) {
             throw new IllegalArgumentException("Fecha invalida");
         }
