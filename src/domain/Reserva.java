@@ -10,6 +10,7 @@ public class Reserva {
     private LocalDate date;
     private LocalTime time;
 
+
     public Reserva(Integer id, Integer idSala, LocalDate date, LocalTime time) {
         if(date.isBefore(LocalDate.now())) {
             throw new IllegalArgumentException("Fecha invalida");
@@ -23,6 +24,13 @@ public class Reserva {
         this.date = date;
         this.time = time;
     }
+
+    public Reserva(Integer idSala, LocalDate date, LocalTime time) {
+        this.idSala = idSala;
+        this.date = date;
+        this.time = time;
+    }
+
 
     public Integer getId() {
         return id;
